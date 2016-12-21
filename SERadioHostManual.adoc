@@ -1,0 +1,782 @@
+:doctype: article
+:revnumber: 1.0
+:listing-caption: Listing
+:pdf-page-size: A4
+:toc:
+:toclevels: 4
+
+= How to Create an Episode: The Manual for Show Hosts of Software Engineering Radio
+
+== Introduction
+
+This document contains general instructions for hosting a Software Engineering Radio Show.
+
+This document is based on the experiences of multiple hosts over a period of several years. It will evolve over time from collaborative edits.
+
+These guidelines are intended to serve as a starting point to reduce the burden of trial and error. Your personal style, and ways you might deviate from these guidelines will evolve with experience.
+
+The steps in creating an episode are:
+
+    1. Come up with a subject
+    2. Find, confirm, and book the guest
+    3. Prepare an outline
+    4. Record the episode.
+    5. Prepare the episode and related assets for publication.
+
+These steps are described in detail in the rest of the document.
+
+== Choose a Subject
+
+=== Types of Subjects
+
+Choose a subject that you are interested in. A key to producing interesting content is that participants have a passion for the material.
+The listeners will pick up on whether you are interested or bored and they will absorb your state of mind.
+
+Show topics should be of interest to a generalist software engineer. A niche area of specialization that is only comprehensible to a specialist in a sub-field is too detailed.
+The purpose of the episode is to introduce the listener to this area. The show is not intended to an expert-level discussion.
+The target audience ranges from advanced university students with some upper level courses to senior software engineers, architects, technical ops and technical managers.
+
+Each episode should contain a mix of specialized information about the topic and tie in to fundamental software engineering concepts.
+Our shows have a useful life measured in years. Shows continue to be downloaded thousands of times even years after their date of publication.
+This is because the timeless computer science and engineering concepts are still relevant.
+
+One source of good topics is the guest. If you start out with a guest, then ask the guest what he or she would like to do an episode about,
+propose some ideas of your own, discuss, and reach an agreement with the guest.
+
+The general areas that we cover are:
+
+ * an area of computer science research [but not too theoretical]
+ * part of the software development lifecycle, such as testing, build automation, operations, run-time analysis
+ * a software engineering fundamental such as design, patterns, architecture, bestpractices
+ * an open-source software project
+ * a programming language
+ * the story of how someone did something, like solved a particular problem
+ * a commercial software product - Be careful not to turn the episode into an advertisement, however we do not totally rule out commercial software as a valid topic.
+ * the way that software engineers do their job, including reading code, writing tests, paired programming, code reviews, test coverage
+ * software development processes, including any aspect of agile and lean and critiques of those processes
+ * the management of software projects and organizations
+ * software as a career
+   ** job interviews
+   ** career strategy
+   ** engineering culture
+ * software as a business
+   ** starting a company
+   ** venture finance basics
+   ** distributed work versus all in one office
+   ** failed company - what was learned?
+
+If you are having trouble coming up with a topic, you can choose a topic from the
+https://docs.google.com/spreadsheet/ccc?key=0Ak7HViSe4KyKdERlRzRVdzhLb2psVnVsRVhvUGRlNUE&usp=drive_web#gid=1[show ideas document].
+This document contains show ideas that have not yet been produced.
+
+=== Use the Show Archives
+
+Browse or search the SE Radio archives to get an idea of past topics. We do not repeat topics, so if your episode idea is too close to a past episode,
+and you still want to do an episode in that area, look for a more differentiated variation on the same topic.
+
+It is acceptable to do an episode on the same area, if there have been significant updates.
+For example, although we have done many episodes on Java topics, an episode on Java 8 would be different enough if it focused on the new features in version 8.
+We have done many episodes on agile, but each one on either a different part of the agile process, or a different agile process.
+
+If you do an episode on a related area to what we have already published, then mention the previous episode(s) near the beginning of your episode and link to them in the show notes.
+
+=== Confirm the Topic
+
+Propose your topic to the group on the mailing list with a couple of sentences of what you think will be covered.
+The editor must sign off on the proposed subject.
+
+== Guest
+
+Sometimes the topic is first, the guest second; other times, the opposite. Either way, you need at least one guest to do an episode.
+Some episodes have more than one guest. That can happen when multiple authors of the same book are invited, or, experts on the same area.
+Multiple guests create some challenges for recording and editing but it is possible to get a good result.
+
+=== Finding the Guest
+
+Often the host will have your a preferred guest in mind. Locate the guest, then ask the guest to be on the show.
+This can be a difficult part of the process because the most well-known people in the industry get asked to do many things (for free) and cannot say yes to all of them.
+
+Contact the guest, leading with your request that the guest appear on the show. Put your request clearly in the subject header of your email
+(or whatever format of message you are using) so that the recipient knows why you sent it even without reading.
+We have had success inviting guests via email, twitter, LinkedIn, and in person at conferences.
+
+Some ways to locate the person you want are:
+
+ * Look around on the person’s blog for a contact form or email.
+ * Direct message the person you want on Twitter.
+ * Request to connect with the person you want on LinkedIn.
+ * Try to contact the person you want on Google Plus
+ * Ask the other SE Radio Hosts if they know the person. Or if they know someone -- maybe a past show guest -- who knows the person
+ * Ask show alumni hosts. Some of the current show hosts know the former show hosts. Ask for help if you need it.
+ * Ask former guests that you personally spoke to.
+ * Ask the IEEE editor for the magazine.
+ * Walk up to the person you want at a conference and ask them in person.
+ * Open source projects have mailing list. Usually the committers all read the list. You can post to the mailing list asking for someone to appear on the show. The person you want might reply.
+ * Get introduced to the person you want through your personal network
+ * Contact the person through their book publisher. The publishers all have PR departments that handle requests for interviews.
+ * If the person will be speaking at an upcoming conference on the topic, then contact the conference organizers. They will often agree to set something up.
+
+=== Can I have two (or more) Guests?
+
+You may know more than one expert on your area and it might look appealing to have a wider discussion with more viewpoints.
+
+Face to face this is not a problem, especially if each guest can speak into their own mic and you can record their own track.
+However, we have learned that episodes recorded over a two-channel Skype call with more than one guest recorded have had a combination of poor audio quality
+and/or difficult edits for reasons <<Ensuring Optimal Raw Audio Quality,explained later>>.
+The best example of this is the episode we did consisting of a http://www.se-radio.net/2014/11/episode-215-gang-of-four-20-years-later/[Gang of Four retrospective]
+(which in spite of audio quality problems was a historical opportunity and became a very popular episode).
+
+If you can get each guest to record their own track on their end so you have one track per guest, that will overcome the Skype limitation.
+
+There are ongoing changes in the technology for recording which may especially help with multi-person episodes.
+We tested a platform called PodClear, which recorded each participant on a call on their own computer through a web interface,
+and then merged the guests into a single multi-track .wav file. This platform no longer exists.
+A similar platforms, Zencastr, has been tested by some hosts and probably works ok. We don’t have a lot of experience with it yet.
+
+=== Show Policy on Conflict of Interest
+
+http://drive.google.com/open?id=1lGO4smBp72Pv2HFoCGIYZml3phorfto7pnSt4ZYz-So[The show policy on conflict of interest]
+may impact your choice of guest. Please read the entire policy. You may choose a guest from your employer on a general software engineering topic.
+However, guests who also work for your current employer where the topic is a product that your employer sells are not allowed under the policy.
+Also, if the guest and host work at the same place, you must mention this in the episode.
+
+Please disclose any other relationships that might appear to lead to a conflict of interest.
+We cannot have a rule to cover every conceivable case, so this is left up to the host. Please err on the side of caution.
+If, for example, you are interviewing your former manager who hired you at a job you had four years ago, or,
+someone at a vendor that your former employer had a business relationship with, then disclose that.
+
+We live in a small world where everyone in our field is at most a few degrees of separation away from anyone else.
+Having a guest with whom you have, or had, a work connection of some kind does not show that you have poor ethics.
+If you disclose it up front, that demonstrates good ethics. If it comes out later and you had not disclosed it, that looks much worse.
+
+=== Qualify the Guest
+
+Ensure that the guest has sufficient English language skills. The podcast listener base is distributed over many countries on multiple continents where, in most cases, English is not the first language. Many of our guests and listeners speak English as a second language. The guest should have clear enough diction to be understood by a range of English language speakers. Some guests have declined to be on the show because they did not have strong enough spoken English skills. The host should also filter on this.
+
+=== Media Kit/Cold Call Bullet Points
+
+When emailing a guest that you do not know and who probably does not know the show, an intro letter describing the show may be helpful.
+Here are some points about the show that you can use in recruiting guests and <<Working with Corporate Communications,communicating with organizations>>.
+You may include these points in an introductory email describing the show:
+
+The show:
+
+ * is in its 11th year with over 270 episodes;
+ * published three times monthly by  http://www.computer.org/portal/web/computingnow/software[IEEE Software] magazine
+ * is downloaded in aggregate 180,000 times or more per month (including current andback catalog), with each show reaching each show 30,000-40,000 within three months;
+ * was https://sprint.ly/blog/developer-podcasts-of-hacker-news/[named the #1 rated developer podcast] based on an aggregation of hacker newscomments;
+ * appeared in in The Simple Programmer’s  https://simpleprogrammer.com/2016/10/29/ultimate-list-developer-podcasts/[ultimate list of developer podcasts];
+ * was included among  http://www.sleepeasysoftware.com/11-podcasts-that-will-make-you-a-better-software-engineer/[11 podcasts that will make you a better software engineer];
+ * is highly rated on iTunes “Top Podcasts” under the category S  oftware:How To;
+ * features thought leaders in the field (Eric Evans, David Heinemeier Hansson, Kent Beck, The Gang of Four, Rich Hickey, Michael Nygard, James Turnbull, Michael Stonebraker, Adrian Cockroft, Martin Fowler, Martin Odersky, Eric Brewer,...);
+ * a demographic survey we did a few years ago indicated that most of our listeners are software engineers with 5-10 years experience, architects, and technical managers.
+
+=== Set Guest Expectations
+
+Set the expectations of your guest so there are no surprises. You can cut and paste the following section into an email, or modify if you wish:
+
+----
+  Dear <guest>,
+  In the podcast marketplace, audio quality has improved significantly
+  over the last five years to the point where VOIP recordings are no
+  longer competitive.
+
+  To ensure audio quality, plan to record your track on your computer –
+  not a phone.  Two channel recording on the source side is the single
+  most important factor we can control that influences audio quality.
+  Audio quality is a factor in the popularity of a show and one of the
+  things that listeners care the most about.
+  On Windows, you can use Audacity, on a Mac – QuickTime.
+
+  Try to approximate these settings:
+  *  .wav or FLAC format
+  *  16-bit samples
+  *  44.1 kHz sampling rate
+  *  320 kpbs bit rate
+
+  Please use a USB microphone plugged into the computer.  Do not use a
+  bluetooth device.  If you don’t have a mic or a headset with a mic,
+  we request that you purchase one.  They can be obtained for less than $20.
+
+  Other prep:
+  1. Send me a connection request on skype at <your-id>
+  2. Plan to locate yourself in a reasonably quiet area -
+     though the occasional phone ringing or dog barking is not a problem.
+  3. The room should not be highly reflective.
+     Carpets, rugs and furniture help soak up echo.
+
+  Sincerely,
+  <host>
+----
+
+=== Booking the Guest
+
+After you have an agreement from a guest to do an episode, it can happen that the guest does not respond to follow-up emails.
+To prevent one guest from blocking your progress on all of your episodes, it is recommended to always have two or three ideas in development in parallel.
+While you are developing the episode, proceed with your research and your outlines assuming that the guest will eventually get back to you.
+The reason for the guest not responding is usually overall workload at their job, work travel, family problems, a book publication deadline,
+or something like that. If you continue to follow up with the guest, in most cases they will eventually do the episode.
+
+==== Working with Corporate Communications
+
+Some organizations have an organizational layer to handle relations between their employees and the media media. This would typically be called the Corporate Communications department, though it may have other names. In those situations, the guest will route you through the communications department to connect you with a gatekeeper. The gatekeeper's job is to ensure that everything that emanates from the guest is consistent with the organization's messaging strategy, to ensure that nothing happens that will reflect badly on the organization, and to prevent leakages of intellectual property and confidential information.
+You will need to work with the corporate communications person to schedule the interview, and, they may require that someone from that department is present during recording of the interview as well.
+Some other typical requests from corporate communications are:
+
+ * They want to know some general information about the show (send them the points in the  media kit ).
+ * They want to know in advance what topics you will cover.
+ * They ask to see the outline in advance.
+ * They ask you to agree in advance to avoid certain types of question or topics.
+ * To listen to the audio before it is published.
+ * To require that they sign off on the audio before we publish it.
+
+We can work with this process. We have had episodes that have worked successfully with these departments. The host should consider whether you are willing to accept the additional overhead, and, it almost always takes longer to get these type of episodes scheduled and recorded than the ones where you are dealing directly with the guest.
+
+=== Shows Get Blocked
+
+About one out of every five episodes will get blocked. This usually happens when the guest stops responding. We do not always know why this is. In at least one case, it was because the host’s emails were going to the spam folder in the guest’s emails. If the guest stops responding, you can try to contact the guest through other channels such as LinkedIn messaging, Twitter DM, or other social networks, or if you see the guest at a conference, or through your network if you know someone who knows the guest and whose emails are not going to spam.
+
+We have learned from experience that it is not possible in all cases to unblock a blocked episode. In some cases we have heard through back channels that the guest was busy, had an illness or a family situation.
+
+The host needs to decide how much effort to put into unblocking a blocked episode. There is a point where it is not worth it to try any more. At that point your options are:
+
+ * Try to find another guest on the same topic - if you have already developed the outline and like the topic.
+ * Re-use some of the outline in a different episode. This might require you to modify the topic slightly.
+ * Give up.
+ * Put the episode on hold and hope that you run into the guest at a conference.
+
+For this reason I advise guests to always have two or three episodes in development. If one episode gets blocked, then you can work on the ones that are not blocked. I also advise guests to plan to do six episodes in a year because one will run into problems, so you still get five.
+
+== Audio Quality
+
+=== The Importance of Audio Quality
+
+Listeners care a lot about audio quality. Audio quality is an important factor in the popularity of an episode. Many of our listeners listen while exercising, on a bus, or in other environments with high background noise. They can only do this if the  noise floor  on the podcast is low enough that they can raise the volume on their device above the background noise.
+
+Be sure and ask for help if you need it. For some general audio engineering guidelines, see the audio quality document . For help with your specific set-up, ask the hosts to find out who is using a system similar to yours, and ask them to help you. Or ask the Computer Society’s audio engineers for some help.
+
+=== Required Format
+
+Hosts are free to use whatever combination of operating systems and audio gear they prefer, so long as it meets show standards. All episodes must meet be recorded in the following format (this is not a minimum - the audio engineering team has asked for this exactly).
+
+ * .wav or FLAC format
+ * 16-bit samples
+ * 44.1 kHz sampling rate
+ * 320 kpbs bit rate
+ * one track per speaker (usually this means stereo with a host and a guest track, but if you have >1 guest, then you will have one track per guest)
+ * reasonably well-leveled between the two tracks (audio engineering will do a levelling pass at the end)
+ * host uses a minimum of a decent quality USB mic (not the computer’s built-in mic)
+ * guest uses a decent quality mic, which they must purchase if they do not have one
+
+If you do not know what this means, or you do not know how to configure your setup to this specification, then ask one of the other hosts or the Computer Society’s audio engineers for help. Several of the hosts know a lot about audio.
+
+=== Ask Guest to Record their Own Audio Track
+
+A good quality audio source is a win-win for the show, the guest, and our listeners. Ask the guest if they are willing to record their own audio track. Tell the guest that this is the single factor under their control that will have the most impact on show quality and the number of listeners.
+
+There are several ways to do this. They are listed here in decreasing order of ease and probability of success.
+
+  1. Software on the guest’s computer.
+     a. Audacity works well on Windows (manual + settings: TBD)
+     b. QuickTime on MacOS (manual + settings: TBD)
+  2. Their mobile phone, if they have a high quality external mic with an adaptor
+  3. Stand-alone digital recording device, which most guests are not going to own.
+  4. Zencastr , a paid web service that will record both sides of the interview in a browser.
+
+This service has recently emerged from beta. Some of the hosts have tried this and some have had issues. When it stabilizes, we will feel more comfortable in recommending it as the single capture for your audio. For now, it is better to use this as a backup.
+
+=== Procedures for Separate Tracks
+When you each record your own track, you will submit two audio files to the media department. They will edit the episode and mix the two tracks into a single mono track. To help them synchronize the tracks, count together from one to five with the guest when you start recording.
+
+=== Ensuring Optimal Raw Audio Quality
+
+There are several approaches for getting optimal audio quality in your recording.
+
+ * The best audio quality can be achieved by recording face to face with professional audio gear.
+   If you are an audio expert who owns all the necessary gear and knows how to produce top-quality audio in person, then do it your way.
+ * Modern smart phones offer audio recording capability but not stereo without add-ons. The built-in mic quality is not adequate either.
+   If you are recording face to face, an add-on stereo microphone with a smart phone adaptor
+   (such as the http://www.ixymic.com/[RØDE i-XY] for the iPhone) produces adequate two-track audio files.
+ * Many episodes cannot be recorded face to face. That leaves Skype or some kind of VOIP as the only option.
+   In that case, the best sound quality is achieved by the host and guest recording their own tracks separately,
+   if the guest does a good job. Because most of our guests are technical, some are able to do this but some are not.
+   And even if the guest is recording his or her own track, the host should record both tracks as a backup.
+
+Most episodes have one guest. We have found that episodes recorded over Skype with more than one guest tend to have poor audio quality
+because a) Skype quality degrades as more callers are added and b) Skype call recorders record two tracks, one for the caller and one for everyone else.
+This means that level or quality issues with each guest cannot be addressed individually during the audio engineering phase.
+For this reason, episodes with more than one guest are required to have each guest record their own track.
+
+We have evaluated some newer technologies such as http://feenphone.com/[Feen’s lossless VOIP technology].
+The quality was quite good, but the guest would have to download and install software, and then enter the host’s IP address and port, which is a bit of work.
+Feen itself does not offer call recording, but if you are enough of an audio geek, you could probably figure outhow to capture the audio track.
+
+This https://docs.google.com/document/d/10OZypC08Tb_YXsjOEhFNy7DUQd5E5Q3xMpKp-O40NJg/edit[document] provides some guidelines for those who are not audio experts on best practices to produce adequate audio quality.
+
+=== Best Practices
+
+1. Hosts should ensure that both they and the guests record the interview from a quiet room with no fans, waterfalls, or air conditioner noises in the background.
+2. Both hosts and guests should refrain from typing, eating, shuffling or crinkling paper during the interview.
+3. Hosts should use a USB microphone plugged directly into their computer to record their own voices during the interview.
+4. Both the host and guest should ensure that their computers are connected to the Internet via LAN lines not WiFi, as WiFi can cause distortion and digital artifacts to be added to the recording. Additionally, any microphones should be directly connected to the computer instead of using WiFi for the same reason.
+5. Adjust the recording levels as high as possible to do without clipping or distortion. This will produce the highest signal-to-noise ratio on the raw audio. Audio engineering generally cannot improve the signal-to-noise ratio and in some cases is prevented from doing otherwise useful edits because there is not enough headroom over the noise floor.
+6. Do not both talk at once - this creates difficulties during the editing phase. Pause at least a fraction of a second after the guest has finished before asking a question.
+
+== Preparing for the Interview
+
+=== Researching the Subject Matter
+
+The host should not assume that the listener already knows a lot about the subject. Nor should the show consist of an expert-level discussion between two experts. A survey done around 2010 found that most of our audience is concentrated among software engineers with five or more years of experience -- that is who you are targeting. Each episode should provide an introduction to a new subject at a level that would be understood by a generalist software engineer.
+
+In any media format, interviews by an unprepared host tend to be unfocused. We do not want to be that show. The host needs to know enough to ask relevant questions.
+
+ * If the guest has written a book, then read the book and ask questions about material from the book
+ * If you are doing an episode about something you are not already knowledgeable about, then read a book or some articles, blog posts, watch some lectures, try it out yourself, or otherwise learn some basics.
+ * Please check the https://www.computer.org/csdl/mags/so/index.html[Computer Society’s search engine] for content on their site related to your topic. If you find some paid content that is relevant, ask Brian to make it public, and, put it in the show notes.
+
+When preparing, try look at the topic from in the position of the listener. What do you need to include in the episode so that, by the end the listener will know the basics about the area.
+
+It is not necessary for the host be an expert on the topic. The guest’s job is to be the expert. Whatever your level of expertise is in the subject, think of yourself as the representative of a person at the beginner level of knowledge. Don’t be afraid to ask a “stupid” question or a basic question. It is not the host’s job to appear as well informed as the guest; the host’s job is to showcase the guest’s expertise.
+
+_Diomidis Spinellis_, the editor of _IEEE Software_ magazine, has requested that we do some low-key product placement for the Computer Society's content.
+While you are doing your research for an episode, go to https://www.computer.org/csdl/mags/so/index.html[www.computer.org/csdl/mags/so] to check for any relevant content on the Computer Society.
+If you find an article that is relevant to your topic, then a) include the links in the show notes and b) mention it on air, the same way you would mention a previous episode of the episode.
+
+The search engine will return free and paid content. Diomidis has some flexibility to move content from the paid side to the free side if there is some especially relevant paid content.
+I am working to get us all access to the paid site.
+
+=== Creating an Outline for the Interview
+
+==== Scope of the Outline
+
+Create an outline for the interview. [underline]#You won’t follow the questions exactly during the interview, but it’s good to have them to fall back on.#
+Having a solid set of questions protects you from the fear of running out of material.
+This will give you confidence to move on to a new topic even when the current discussion is going well.
+You will probably have more material than you need but that’s better than running out.
+
+1. Prepare enough questions in advance for about 45 minutes of in-depth discussion -- usually the basics and then about _four to six major subtopics_.
+2. Put your questions in a google doc and share with “can edit” authorization to `seradio@googlegroups.com`.
+3. The other hosts can go on the google doc and Insert > Comments.
+4. Using feedback from the other guests, then revise your questions.
+
+There is an art to finding a balance between a rigid format and covering everything that you planned versus a more spontaneous conversation,
+following interesting points as they come up, and finding at the end that you spent too much time on some things and failed to cover other things
+that you wished you had covered.
+
+Research the show archives for any past appearances by your guest, and any episodes on very closely related topics.
+Listen to any archived episodes on the same or closely related topics. Do this to avoid covering the same material from past episodes.
+You will also need the past appearances by your guest both for the show notes and the intro segment.
+Make a note of the episode number and title in your interview notes.
+Some guests ask to see the questions in advance but most do not. If the guest requests your questions in advance, please accommodate the guest’s request.
+But make it clear that the outline is more of an estimation of where the episode will go than a script.
+
+==== Start with the Lead
+
+Someone once described to me the way that newspaper writers are trained to write a story.
+The first paragraph should tell the entire story at a very high level. Then the next few paragraphs should tell the story again, but at a more detailed level.
+Then the following one to two pages should tell the story in detail. This might better be called a fractal.
+
+Start out at a high level. Try to cover the basic “what is” and “why” in the first five minutes.
+The listener should get a rough idea of where the episode is going within five minutes.
+Then circle back around and drill down in more detail.
+
+==== Great Depth Questions
+
+Some questions that you can draw from as appropriate that often provide an insight into the material are listed below:
+
+  1. What problem does <X> solve?
+  2. You have described <X> as <summary>. Can you explain that in more detail?
+  3. You described <X> as having three parts. Can you explain what each part does?
+  4. Why is <X> becoming important right now?
+     a. How did people accomplish <what X does> before <X>?
+     b. How do people accomplish <what X does> right now (this one assumes they don’t use <X>)
+     c. Are there other (software/hardware/the world) made <X> more relevant?
+     d. Has <X> become increasingly relevant because it has been adopted by other technologies?
+  5. What are the performance characteristics of <X>? Focussing on whatever is important about <X> which might be:
+     a. Low latency
+     b. High throughput
+     c. Large at-rest data size
+  6. History
+     a. What other systems/languages influenced the design of <X>?
+     b. How did <X> come about?
+  7. Evaluations
+     a. What did you learn from the experience?
+     b. What do you wish you knew when you started?
+     c. What is one thing that you would you do differently now?
+     d. What is the most successful aspect of <X>?
+     e. What was the least successful aspect of <X>?
+  8. Future
+     a. If <X> becomes widely adopted, what could be different in five years?
+     b. How do you see <X> developing over the next five years?
+  9. Management
+     a. What is involved in managing <X>?
+     b. Does <X> require specific domain expertise to use or manage?
+  10. Adoption
+     a. When is using <X> not appropriate?
+     b. Are their trade-off’s to <X> that we should be aware of?
+     c. What is a common stumbling block people experience when adopting <X>?
+     d. Is there a community around <X> where people can get help?
+  11. Team
+     a. How does <X> affect the structure of the team?
+     b. How does using <X> impact a team’s development process?
+
+
+==== Condense Your Outline
+
+In order to understand the domain, you will do a lot of research. The outline may run one to two pages and have 20+ questions.
+That is more than you can cover in an hour but it is ok to have more material in the outline than what there is room for in the episode.
+That is where this next phase comes into effect: condensing the out.
+
+In a typical episode, you can cover about five main points. After you have finished your outline, then think about what are the five most important areas you want to be sure to cover in the interview.
+Make a separate list or add some notes on your outline. You will use this list of five topics to guide the time management during the interview.
+If you cover all of those things and still have more time, then you have your longer outline to fall back on. Usually this does not happen.
+
+==== Share Your Outline
+
+Share your outline with the group `seradio@googlegroups.com`.
+In the message of the share window, indicate that you are requesting comments, your planned record date, and the date when you want comments.
+Schedule the guest so that you give the other hosts at least a week to provide comments, and then give yourself another week to revise the outline to incorporate the comments.
+
+=== Researching the Guest
+
+You can usually find a guest biography on the internet. If I can, then I put together a short bio and email it to the guest asking for edits.
+Often there are no edits. This reduces the number of things that the guest has to do. If you cannot find a bio, then ask the guest for a short bio.
+You will use this to introduce the guest. The guest may provide a bio.
+Guest bios are often whimsical, witty, and contain metaphors and other tropes, like “was the chief cat herder for a startup”.
+Other times, they contain aspirations and life goals and philosophies, such as “tries to make the world a better place”.
+Translate the guest-provided into concrete facts such as “Was the CTO of...”, “Founded the company...”, “Held a position as a researcher at ...”.
+
+=== Schedule the Interview
+
+Arrange a time directly with your guest. Interviews can be done in person or over an internet connection.
+
+=== The Host is a Facilitator
+
+The episode is about the guest -- not about the host. The host’s job includes the following:
+
+ * The host’s job is to put the guest in a position to share his or her expertise on the topic with the listeners.
+ * The host represents the listening audience. The host directs the guest toward material that the audience will find interesting and away from material that the audience will not care about. A lot of this happens during the preparation period.
+ * The host manages the time budget of the interview so that everything that is necessary happens within 60 minutes. There are about 15 things that have to happen within the hour. More on this below.
+
+The host should sound more like an attentive and curious student. The host should not come across as trying to demonstrate that they know as much or more than the guest about the topic. I encourage the host to feel no embarrassment over not knowing something that the guest knows. It is ok for the host to not know something. It is the guest’s job to know everything. You can also fall back on the time-tested, “The listeners might like you to explain what X is,” which provides plausible deniability to you as the host that you do know what X is.
+
+=== Controversial Issues
+It is ok to ask some difficult questions about controversial topics. Let the guest respond but do not debate the guest. If you pose the question the guest answers, then you have done your job as a journalist. Maybe the guest adequately addressed the question, maybe, not. Trust your listeners to decide for themselves whether the guest gave a good enough answer.
+The best way to approach a controversial area is do not challenge the guest directly. Do not ask the question in such a way that it sounds like the host is expecting a specific response. Acknowledge the controversy, but distance yourself from the issue. For example, “There has been a lot of controversy about the paired programming. Some have charged that the it is too costly and does provide benefits. What is your view on that?” Ask your question, let the guest respond, and move on. Do not debate the guest.
+Another technique for framing controversial topics is, “Would it be fair to say that <X>?”. That gives the chance for the guest to dispute the view.
+
+=== Time Management
+
+The format is a one-hour episode but it can run over. If it goes at least 45 minutes that is enough, and there is no need to cut material if you go 1:05 or 1:10.
+
+You can record up to about 70 minutes if there are do-overs or out-of-band meta discussions that will be cut. It is hard to know while you are recording how much material you will have to cut. If you record 75 minutes and have to cut the 10 least interesting minutes, that is better than recording 60 and ending up with 45 usable minutes.
+
+Time management is very important in getting the episode to come out the way that you want it. There is an art to this, and you will get better at it as you do more. The art is to balance out your material over the time you have so that you cover a range of things without spending too much or too little time on any one topic.
+
+Management of your time requires making choices about what are the most important things to cover, fitting those things into the time that you have and deciding what can be left out.
+Some of the best films cut significant scenes during editing in order to improve the story flow.
+Think, for example, about the film director Peter Jackson’s  http://www.thehobbit.com/[over-long] epic movies.
+Two hours may be worse than one hour because it requires twice the investment of time for the listener, and they may in the end get the same amount of information.
+The episode has about 10 minutes of structure at the start and 5 minutes at the end. That’s the easy, and less creative, part.
+The part where you, the host, have the most impact in shaping the result that you want is in the middle 45 minutes.
+
+=== Keep the Show Moving Along from Topic to Topic
+
+You have prepared your outline and condensed it to the five most important areas.
+This section discusses how you will ensure that you cover those areas in the time you have.
+Guests tend to follow  http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion#Newton.27s_1st_Law[Newton’s First Law of Motion].
+They will continue to talk about the same thing until the host changes the topic.
+If the guest is providing good material, let them keep going for a while.
+You can encourage them by asking follow-up questions and drilling down into more detail.
+But there will come a point when, if you are going to cover three to five topics in 45 minutes, you as the host might need to change the subject.
+Sometimes this is not true: the guest will arrive at what is clearly a full stop.
+If that happens, then that is a good time to change topics and it sounds very natural, but if that does not happen, then it is up to the host to stop one topic and introduce a new one.
+If you want to move on to a new sub-topic, then let the guest finish what they are saying, and go to a different topic.
+You can use a bridge such as,
+
+ * That is very interesting, but now I want to ask you about ...
+ * In the interest of time, I want to move on to ...
+ * If the guest had mentioned a topic that you planned to ask about, then “Earlier in the show ago, you mentioned <X>. I would like ask you something about that”
+ * We have been talking about <X> for a while, now, and I would like to move on to <Y>.
+
+When you switch topics, you can go in the order that you had in your outline, or go out of order if something seems more relevant to what the guest just said, or maybe go to a topic that came up during the interview that was not part of your plan but seems more interesting than what you had in your outline.
+Do not feel that you must stick to your plan if the interview flows in an interesting direction.
+The flow from one topic to the next can be more seamless if it sounds like you are going from one related thing to another related thing rather than totally changing the subject -- which can be ok as well.
+
+=== Remain Calm
+
+It is natural to feel nervous when you start doing shows. Everyone goes through this. It will get better with experience. Preparing in advance will help with this to some extent but you will be nervous at first and then less so over time as you get better at it. Your perception of time can expand or contract during the hour. At times you may be worried about running out of material, and other times feel like you won’t have enough time to cover everything. Try to relax, use whatever stress management techniques work for you, look at the clock, and look at your notes to get an idea where you are and how much time you have left.
+
+=== Mention the Show Notes
+
+When the guest refers to any form of content (a book, research paper, talk that is online), at the next point where the host has an opening to speak, the host should say “We will link to that in the show notes”. Make a note of this, or make a note later when you are doing the edits.
+When you are putting together the show notes, include all of the things that you promised to have in the show notes. Try to find the reference on your own, but in some cases, you will have to ask the guest for the link if the guest has many publications. Even if the content is not linkable (e.g. a book that is not free online) then link to the publisher’s page or a page on Amazon.
+
+== Conducting the Interview
+
+=== Spoken English Best Practices
+
+The show’s listener base is international. A significant fraction of our audience are not native English speakers and are not necessarily familiar with American English idioms and figures of speech. If you are one of the show hosts who grew up in America, try not to rely on metaphors, idioms, and other culturally specific figures of speech that make your points more difficult for some listeners to understand. Jokes often do not work, for similar reasons.
+Try not to use an excessive number of filler words such as “um”, “err”, “so”, “like”. These can be edited out but it’s time consuming to do so and may make the edited conversation sound unnatural. A few of these are not a problem.
+
+=== Last-Minute Preparations
+
+Go through this  excellent http://theaudacitytopodcast.com/podcasting-preflight-checklist-tap164/[pre-flight checklist]
+that will remind you how to avoid many potential problems.
+
+ * Do a QA of the recording software/hardware to ensure that the levels are correct and that you are recording everything that you plan to record.
+ * Do a sound check of your gear alone, then one with the guest. This is to avoid recording an episode that turns out to have not been recorded at all or to be unusable.
+ * Silence your mobile phone, turn off the speakers on any computers you have, and otherwise silence anything that will produce audible beeps and alerts during recording.
+
+=== Prepare the Guest
+
+Before you start recording, set some expectations with the guest to help them understand the process and to avoid as much as possible having to interrupt the interview.
+
+1. Inquire if the guest has a hard deadline so that you will be able to wrap up the interview without running over.
+2. Remind the guest to turn off his or her mobile phone and any other gadgets or software that emits beeps and other sounds.
+3. As much as possible, the guest should shut down any other software on their device other than Skype.
+4. Skype is very chatty. If you are using Skype, the host and guest should configure their Skype client to prevent incoming calls and turn off all notifications.
+5. Give the guest an overview of how the hour will go (see b  elow)  . Be especially sure to tell the guest that you will ask them about their (book/product/blog/upcoming conference appearance) at the end, so they do not have to worry about this.
+
+=== Compliance with Laws Regarding Recorded Conversations
+
+Some episodes are recorded face to face. This section applies to episodes that are recorded remotely.
+Many legal jurisdictions have http://en.wikipedia.org/wiki/Telephone_recording_laws[laws regarding recorded phone conversations].
+The laws may also apply based on where the guest is situated, which in our case is often in a different legal jurisdiction than the host.
+A common rule in many jurisdictions is that the participants must be informed, or consent for the recording of a call to be legal.
+Check the exact regulations based on where you live and based on where the guest lives. Please ensure that you follow the rules.
+
+It is not clear whether these laws apply to Skype or VOIP but to be on the safe side, assume that whatever restrictions apply to phone apply equally as strictly to Skype. The most conservative practice here would be to state that the call is being recorded and to ask for the guest’s consent. That should cover nearly all cases.
+
+=== How to Divide up the Time
+
+==== Record more than you need
+
+Most episodes have some do-overs and side discussions, some more than others that will not make into the final cut.
+It is difficult to keep track of how much time has been spent on side discussions that won’t be published.
+It can add up to a lot if the guest spends two minutes answering a question, you have audio problems, you restart the question, and the guest answers it again, that can be five minutes.
+If that happens two or three times, it adds up. Some times during editing you will decide that one question did not go very well and that you don’t want to use it in the final.
+That is another reason for recording a bit more than you need.
+
+It is recommended to record more than an hour so that you will have an hour of content that you can use. Up to a 75 minutes is not going to be too much, if you have five minutes of side discussions.
+
+==== Milestones in the Hour
+
+This section describes how to use the time. It is recommended to print this out, keep it in front of you during the interview, and check items off as you go along so you don’t forget anything.
+
+    1. Introduce yourself: _“Hello this is <you> for Software Engineering Radio”_
+    2. Introduce your guest:
+        a. _“Today I have with me <guest>.”_
+        b. Speak about the guest’s bio. Cover three or four high points.
+           Keep it to about three sentences or less, unless the guest is a major luminary then you may go up to four sentences.
+           It’s ok to omit some things if the guest has accomplished a lot.
+        c. State the topic of the episode. _“I will be talking with <guest> about <topic>”_.
+    3. Welcome the guest to the show:  _“<guest> welcome to Software Engineering Radio”_.
+       (If the guest appeared on any past shows, then say _“Welcome *back* to Software Engineering Radio”_
+        and then mention all of the past _show numbers and topics_ of that guest.”
+    4. If the guest and the host are employed by the same employer, disclose that.
+       If you have any other disclosures, such as past business relationships with the guest, then makes those here.
+    5. Call to action here (or later, or both)
+    6. If the show has done any past episodes on very closely related topics, mention the
+       episode numbers and topics of those episodes. If there were past episodes that are
+       related but not very closely related, save those for the episode notes.
+    7. Ask the guest to share any additional information about himself or herself.
+       The guest-provided or internet biographies are often out of date.
+    8. The first question or two should be very high level, like:
+        a. _what is <topic>?_
+        b. _what problem does <topic> solve?_
+        c. _what problems does the industry/developers face that drove this solution?_
+        d. _what is the history of this topic?_
+        e. it may be appropriate to provide some background, like
+           _“before we discuss <topic> tell us about the N-1 generation of solutions in this area”_
+    9. Cover the topic by asking the guest questions from your prepared list, and other interesting ideas you have as the episode goes on.
+        a. Keep in mind the time. You have about 45-50 minutes to cover four to six main sub-areas.
+        b. It is ok to deviate from your prepared list.
+        c. If you totally mess up a question you can ask it again. The editor can fix it.
+           Leave a verbal “note” to the editor to fix it (you can say, live, “editor please fix this”)
+           and then leave a few seconds of silence before asking the question again.
+        d. Asking follow-up questions is a good way to get more detail. _“Can you say more about...”_, _“How exactly does it do that?”_ etc.
+        e. If you like where the guest is going, then ask a question that keeps the guest going in the same direction they were going in.
+        f. Guests often say something really interesting that suggests a drill down question.
+           If it sounds interesting, then go that direction. If something that the guest said makes you think of another question, probably a lot of your listeners had the same thought.
+        g. If the guest is going on for too long without a pause, interrupt the guest so you can ask another question. Consider reminding the guest to deliver shorter answers and then come to a full stop so the host has another chance to talk.
+        h. Again, keep in mind that you want to cover four to six main areas in the main body of the episode, so don’t spend too much time drilling down too deeply into one area or you will find that you have not left enough time for other things. Keep track of time and make a judgement of when to move on to something new.
+        i. You can have some “out of band” conversations with the guest that will be removed from the final edit
+        j. If you realize while you are doing the interview that some edits will be required, make a note and the approximate timestamp where you are when the thing happened.
+        k. Continue drilling down and changing topics until it is time to go into the closing segment.
+    10. When you reach approximately the 0:50 to 0:53 of recorded content (which can take longer than the clock time because of side discussions and do-overs), go into the last phase of the episode:
+        a. Ask the guest if there are any questions that you should have asked that you did not. The out of band conversation you have about this will be edited out. The questions themselves and the guest’s responses may need to be moved to a different place in the episode during the editing process if you ask a question that relates to something that you covered earlier.
+           This is the part where the guest makes you sound really smart if they feed you a question that you wouldn’t have thought of.
+        b. Ask about organizational matters:
+            i. Is the project open source/commercial?
+            ii. Does the project have an industry sponsor?
+            iii. Does it have an active community?
+            iv. How can listeners find out more about it? [always ask this question]
+            v. Where is the website/mailing list/etc.
+        c. Ask the guest to promote himself.
+            i. Tell the listeners about your book. Where can the book be purchased?
+            ii. Where can listeners follow you? Do you have a blog/twitter?
+            iii. Where can listeners find your other publications?
+            iv. Will you be speaking at any upcoming conferences or events?
+        d. Tell the listeners that all of the things the guest just said will be in the show notes.
+    11. Thank the guest for being on the show.
+    12. Remind the listener that the show notes will have everything that was mentioned.
+    13. Call to action  (if you did not already do it, or you want to do it twice).
+    14. Say your name again, _“This is <X> for Software Engineering Radio. Thank you for listening”_.
+
+==== The Call to Action
+
+We use a http://en.wikipedia.org/wiki/Call_to_action_%28marketing%29[call to action]  to get listener feedback.
+This is optional because it is now in the pre-recorded outro.
+If you do this, then, in your own words, hit all of the following:
+
+We want to hear from the listener. There are many ways they can reach us.
+
+    1. Comment on the show on our web site se-radio.net
+    2. Email:  `team@se-radio.net`.
+    3. Twitter: tweet about or direct message `@seradio
+    4. On LinkedIn and FaceBook, or comment in our group _Software Engineering Radio_
+
+=== Best Practices
+
+The following techniques have been developed to get the best content. Adopt these as you think best during the interview.
+
+==== Use the Outline
+
+The outline is there to give you something to fall back on, and to help you focus on your best ideas for the episode. You may have an idea of how to sequence the topics in what seems to you a logical order. Do not expect that the episode will follow the outline. The recording will never go according to the outline for many reasons:
+
+ * The guest will answer what you had planned as multiple questions in one response
+ * The guest answers in such a way that it leads into another question you had planned for later on but you choose to go ahead to that question because you have a nice transition
+ * The guest says something interesting that leads to some unscripted follow-up questions.
+
+This is natural. You may choose to ask questions that were not on the outline if you come up with something better while doing the interview. This often happens if the guest says something interesting that you had not thought of. If you devote a chunk of time to unscripted material, you will probably have to give up some scripted material, but you will have a better end result if you like the unscripted idea better than what you had planned. It is also true, though, that if you deviate from planned material for a few minutes, you may want to cut that off and come back to the outline.
+
+Keep the outline open near you in print or whatever format you prefer so you can cross of items as they are covered. Because the interview does not always go in the order that was planned, you will be crossing off items from the middle and later in the outline. By doing this you can see at all times the non-crossed items are the unused questions.
+
+==== Start Strong
+
+The listener should get an idea within the first minute or two what the episode is going to be about. Start out with a basic question that introduces the topic. Don’t spend time on anecdotes or side stories.
+
+==== The Importance of Listening to the Guest
+
+It is important to listen to the guest very carefully. This is important for several reasons.
+
+    1. If you don’t understand something, you should interrupt (or wait) and ask a clarifying question. If you are listening carefully and you did not understand, then probably many of your listeners will not understand either and will have thought of the same question.
+    2. So that you can track which questions in your outline the host has answered without you asking, so you won’t ask those questions.
+    3. To get ideas for follow-up questions.
+
+If the host is not tracking the guest it will be evident to listeners.
+
+==== Transitions
+
+Sometimes one topic naturally flows into the next topic. But not all transitions have to be natural. It is ok to move to an unrelated topic with a bridge like:
+
+    * This has been a great discussion about X, but now I want to talk about Y.
+    * In the interest of time, I want to move on to some questions about X.
+    * We only have a few minutes left so I want to get your views on X.
+
+Or, you can move on without a bridge by asking the next question. If you do all of your transitions without bridges it can sound a bit like a robotic host who is reading a pre-planned list of questions. But a mix of bridges and non-bridges works.
+
+==== Interrupt the Guest and Give Feedback to Get the Result You Want
+
+If you allow the guest to go on for too long, or to not answer the questions, then you lose control of the interview, and you will end up with a recorded lecture if you are lucky. In the worst case you end up with a recorded free-form monologue on whatever the guest felt like talking about.
+
+You may have to interrupt the guest in order to record the the way you want. This is not a natural part of a conversation for some people because in some contexts it is considered rude to interrupt.
+
+Advise the guest up front that, even though the guest will be doing most of the talking, the show is intended to be a two-way conversation. Tell the guest not to let his responses go on for “too long” without stopping. It is important to maintain the back-and-forth rhythm of the conversation. If the host likes where the guest is going, the host can always ask a follow-up question that keeps the guest going in the same direction. The guest may not have the same idea of what is “too long”. If the guest goes on for what feels like too long without a host interaction, then stop the guest and let them know they just went on for too long.
+
+What, exactly, is “too long” is largely a matter of feel; some lengthy responses do not come across as over-long. You can always give additional feedback during the interview if you want more, or less, from the guest. If the guest finishes answering the original question, implicitly asks himself, another question, and then starts to answers that, then that is good time to interrupt and ask another question. It might be the same thing that the guest was about to talk about, or something on your agenda.
+
+==== Paraphrase What the Guest Just Said
+
+We have learned from experience that, after the guest explains something (especially if it is very complex and deeply technical) that it improves the listener experience if the host restates what the guest said before going on to the next thing.
+
+There are three parts to this:
+
+    1. Setup what you are going to do:
+        a. “If I understood you correctly, then what you are saying is...”
+        b. “Your main point here is that...”
+        c. “What I hear you saying is ...”
+    2. A condensed summary of the guest’s core points.
+    3. A follow up request for confirmation or correction:
+        a. “Did I understand correctly?”
+        b. “Did I get that right?”
+        c. “Is that what you meant?”
+
+These request at the end invites the guest to correct you if you did not exactly get it right. Even if you missed a point or get something wrong, that is very instructive because it gives the guest the opportunity to correct you. If the host did not get the point exactly right, then probably many listeners did not either. Going through the process of clarification will help the listeners understand what might have been a subtle point. However, the final request for clarification may not be necessary because the guest will hear the summary as an implied question.
+
+It is not necessary to do this with every statement the guest makes. Some things are easy enough to understand, and sometimes you just need to go with what the guest said in order to move on. If you have covered all of the basics and are getting into advanced points near the end of the time period, that might not be a good time to do this because it does take time.
+
+We have a range of listeners, and some points may only be accessible to the more advanced listeners. It is a matter of judgement where this technique is best applied, but you probably will use it at least four or five times within a one hour episode.
+
+==== Mix Abstraction with Examples
+
+Different people have different learning styles. Some proceed from abstraction to the concrete cases, while others synthesize the the examples to get to the abstraction. Most of us probably do a combination of both at different times.
+An episode will always contain some conceptual material. This is part of what makes the content valuable for years after an episode is recorded. But beware the danger of all concept/no examples. We have had some episodes in which the entire discussion was at a very abstract level. At the end it is hard for many listeners to understand what that episode was about.
+
+Examples bring the concepts alive. If the conversation covers the abstraction of a conceptual view, then either ask the guest for an example, or provide an example and ask the guest to comment.
+
+You can introduce examples with a question like:
+
+    * “Can you give a situation where that would be used in practice?”
+    * “What are some of the main use cases for that in practice?”
+    * “Is that feature similar to the X feature in the Y language? “
+
+You can also come up with your own example and try that out. Ask the guest if the example is a valid example of the point:
+
+  * “Would an example of this be when I am making copies of a foobar and I want to improve the alignment of the framiss without introducing an additional bogon? “
+
+Another source of examples is your own experience. If you have used the technology, or
+
+==== Asking Multiple Questions at Once
+
+If you ask multiple questions at once, usually you will only get an answer to one of them, unless you keep asking the other ones until you have the answer to all of them. Some hosts use this as a technique. They are in effect offering the guest multiple questions and letting the guest choose which one to offer (without saying as much). This can work as a technique, if you are happy with getting the answer to any one of them.
+
+The author did an episode about logging in which he asked four questions at once:
+
+    1. Who are the producers of logs?
+    2. Who are the consumers of logs?
+    3. What is the content of log records?
+    4. For what purpose are logs created?
+
+I thought that these questions we so closely related that I needed to ask them all at once and get an answer to all of them at once. The way I handled this was to say in the interview, “I am doing to ask you four questions at once”, and then I kept track of which ones the guest had answered until he had covered all four of them.
+
+==== The Catch-All Question
+
+If you have time near the end, or you may leave time, ask the guest “Is there anything else I should have asked you?”. This often leads to a short discussion that will surface usually one more question. Then ask that question. Cut the side discussion from the final version of the episode so the question sounds like you thought of it.
+
+=== The Nuclear Option: Fire the Guest
+
+Keep in mind that you are not obligated to finish recording the episode or to use the content if something goes horribly wrong.
+This hardly ever happens but in a tiny fraction of cases the guest has been unsuitable because they will not follow the format laid out by the host or they provide bad content for the answer.
+If you have tried several times to give the guest feedback and it is just not working, you always have the option to stop recording the episode, or to record it but not to publish it.
+
+There are multiple people in the industry who would be suitable guests on most topics.
+If an interview doesn’t work out, then you can find another guest and re-use the outline.
+
+A more common case is audio issues that were bad enough to make the episode unacceptable from an audio quality standpoint.
+In those cases, the episode had to be re-recorded with better audio quality.
+
+== Editing the episode
+
+Sometimes an episode comes out perfectly; other times it needs to be fixed. IEEE Computer Society staff will do the first pass of edits. Put the required edits in the Trello card.
+
+Listen to the first pass of edits. If there are any fixes required, pass those along. When you sign off, your episode goes into QA. Robert or someone else will listen through for any egregious bugs (one time we published the raw file).
+
+You will learn a lot about your own skills by listening to the episode. Listening to your own episodes is a great way to find out those areas where you need to improve as a broadcaster. It is that you are not perfect when you start out. You will improve over time if you try to fix the things you hear that you don’t like.
+
+== Getting Feedback from the other Hosts
+
+Feedback from hosts is a part of our process. We can all learn from each other. I hope that all of the hosts will listen to all of the episodes, but this is not a requirement. Robert creates a feedback thread on each episode for the internal mailing list..
+
+Here are the main feedback questions:
+
+1. What did you learn from the episode?
+2. What did you like about the episode?
+3. What did the host do in the episode that you could learn from and apply to your episodes?
+
+== License
+This work is licensed under the http://creativecommons.org/licenses/by-nc-nd/2.5/[Creative Commons 2.5 License].
+Please refer to the http://creativecommons.org/licenses/by-nc-nd/2.5/[license text] to learn what you can do with the content.
+The license is easily understandable by non-lawyers.
+
